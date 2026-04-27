@@ -25,7 +25,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 python main.py
 ```
 
-서버는 기본적으로 http://localhost:8000 에서 실행됩니다.
+서버는 기본적으로 http://ramza.iptime.org:8000 에서 실행됩니다.
 
 ## API 엔드포인트
 
@@ -49,5 +49,4 @@ python main.py
 
 ## API 문서
 
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc 
+- Swagger UI: http://ramza.iptime.org:8000/docs
