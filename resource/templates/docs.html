@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block title %}문서 목록{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>문서 목록</h2>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <form method="GET" action="/doc" id="searchForm">
+                <div class="mb-3">
+                    <label for="source" class="form-label">소스 파일</label>
+                    <select class="form-select" id="source" name="source" onchange="loadLoaderTypes()">
+                        <option value="">소스 파일을 선택하세요</option>
+                        {% for source in sources %}
+                        <option value="{{ source }}" {% if source == selected_source %}selected{% endif %}>{{ source }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="loader_type" class="form-label">로더 타입</label>
+                    <select class="form-select" id="loader_type" name="loader_type">
+                        <option value="">로더 타입을 선택하세요</option>
+                        {% for loader_type in loader_types %}
+                        <option value="{{ loader_type }}" {% if loader_type == selected_loader_type %}selected{% endif %}>{{ loader_type }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">검색</button>
+            </form>
+        </div>
+    </div>
+
+    {% if docs %}
+    <div class="mt-4">
+        <h3>검색 결과</h3>
+        <div class="card">
+            <div class="card-body">
+                {% for doc in docs %}
+                <div class="mb-3">
+                    <h5>{{ loop.index }}. {{ doc.content }}</h5>
+                    <small class="text-muted">
+                        소스: {{ doc.source }} | 로더 타입: {{ doc.loader_type }}
+                    </small>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info mt-4">
+        검색 결과가 없습니다.
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+async function loadLoaderTypes() {
+    const sourceSelect = document.getElementById('source');
+    const loaderTypeSelect = document.getElementById('loader_type');
+    const source = sourceSelect.value;
+    
+    // 소스가 선택되지 않은 경우 로더 타입 드롭다운 초기화
+    if (!source) {
+        loaderTypeSelect.innerHTML = '<option value="">로더 타입을 선택하세요</option>';
+        return;
+    }
+    
+    try {
+        const response = await fetch(`/api/loader-types/${encodeURIComponent(source)}`);
+        const data = await response.json();
+        
+        // 로더 타입 드롭다운 업데이트
+        loaderTypeSelect.innerHTML = '<option value="">로더 타입을 선택하세요</option>';
+        data.loader_types.forEach(loaderType => {
+            const option = document.createElement('option');
+            option.value = loaderType;
+            option.textContent = loaderType;
+            loaderTypeSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error('로더 타입 로딩 중 오류 발생:', error);
+    }
+}
+</script>
+{% endblock %} 

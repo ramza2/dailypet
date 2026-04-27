@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}프롬프트 템플릿 채팅{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', path='/css/prompt_chat.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="chat-container">
+    <!-- 프롬프트 템플릿 선택 -->
+    <div id="template-section" class="template-section">
+        <div class="section-header">
+            <h2 class="section-title">프롬프트 템플릿</h2>
+            <span id="template-toggle" class="section-toggle" title="템플릿 영역 접기">▼</span>
+        </div>
+        <div class="section-content">
+            <div class="templates-container">
+                {% for template in templates %}
+                <div class="template-item" data-id="{{ template.id }}">
+                    <div class="template-name">{{ template.name }}</div>
+                    <div class="template-content">{{ template.content }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- 강아지 프로필 상세 목록 -->
+    <div id="profile-section" class="profile-section">
+        <div class="section-header">
+            <h2 class="section-title">강아지 프로필</h2>
+            <span id="profile-toggle" class="section-toggle" title="프로필 영역 접기">▼</span>
+        </div>
+        <div class="section-content">
+            <div class="profiles-container">
+                {% for profile in profiles %}
+                <div class="profile-item" data-id="{{ profile.idt_pet }}">
+                    <h3>{{ profile.name }}</h3>
+                    <p>종: {{ profile.breed }}</p>
+                    <p>성별: {{ profile.gender }}</p>
+                    <p>중성화: {{ '완료' if profile.neutering_yn == 'Y' else '미완료' }}</p>
+                    {% if profile.birthday %}<p>생년월일: {{ profile.birthday }}</p>{% endif %}
+                    {% if profile.adoption_date %}<p>입양일: {{ profile.adoption_date }}</p>{% endif %}
+                    <div class="health-info">
+                        <h4>건강 정보</h4>
+                        {% if profile.weight %}<p>체중: {{ profile.weight }}kg</p>{% endif %}
+                        {% if profile.classification %}<p>체형: {{ profile.classification }}</p>{% endif %}
+                        {% if profile.bcs_type %}<p>BCS 유형: {{ profile.bcs_type }}</p>{% endif %}
+                        <p>건강 상태: {{ profile.health_status }}</p>
+                        {% if profile.health_issues %}<p>건강 이슈: {{ profile.health_issues }}</p>{% endif %}
+                        {% if profile.last_checkup_date %}<p>마지막 건강검진일: {{ profile.last_checkup_date }}</p>{% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- 채팅 영역 -->
+    <div class="chat-section">
+        <div id="chat-messages" class="chat-messages">
+            <!-- 채팅 메시지가 여기에 추가됩니다 -->
+        </div>
+        <form id="chat-form" class="chat-input">
+            <input type="text" id="message-input" placeholder="메시지를 입력하세요..." autocomplete="off" disabled>
+            <button type="submit" id="send-button" disabled>전송</button>
+        </form>
+        <div id="loadingDialog" class="loading-dialog hidden">
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', path='/js/prompt_chat.js') }}"></script>
+{% endblock %} 

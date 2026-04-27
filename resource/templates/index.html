@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block title %}반려견 AI 채팅{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="/static/css/style.css">
+{% endblock %}
+
+{% block content %}
+    <!-- 좌측 프로필 목록 -->
+    <div class="profile-list">
+        <h2>반려견 프로필</h2>
+        <div class="profiles">
+            {% for profile in profiles %}
+            <div class="dog-profile" onclick="selectDog('{{ profile.idt_pet }}')">
+                <h3>{{ profile.name }}</h3>
+                <p>종: {{ profile.breed }}</p>
+                <p>성별: {{ profile.gender }}</p>
+                <p>중성화: {{ '완료' if profile.neutering_yn == 'Y' else '미완료' }}</p>
+                {% if profile.birthday %}
+                <p>생년월일: {{ profile.birthday }}</p>
+                {% endif %}
+                {% if profile.adoption_date %}
+                <p>입양일: {{ profile.adoption_date }}</p>
+                {% endif %}
+                <div class="health-info">
+                    <h4>건강 정보</h4>
+                    {% if profile.weight %}
+                    <p>체중: {{ profile.weight }}kg</p>
+                    {% endif %}
+                    {% if profile.classification %}
+                    <p>체형: {{ profile.classification }}</p>
+                    {% endif %}
+                    {% if profile.bcs_type %}
+                    <p>BCS 유형: {{ profile.bcs_type }}</p>
+                    {% endif %}
+                    <p>건강 상태: {{ profile.health_status }}</p>
+                    {% if profile.health_issues %}
+                    <p>건강 이슈: {{ profile.health_issues }}</p>
+                    {% endif %}
+                    {% if profile.last_checkup_date %}
+                    <p>마지막 건강검진일: {{ profile.last_checkup_date }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- 우측 채팅 영역 -->
+    <div class="chat-area">
+        <div class="chat-container">
+            {# OpenAI 패널: 유료 서비스 미사용 시 hidden 제거로 다시 표시 #}
+            <div class="chat-box" id="openaiChatPanel" hidden>
+                <h3>OpenAI</h3>
+                <div class="chat-output" id="openaiChatOutput"></div>
+                <div class="input-area">
+                    <input type="text" id="openaiMessageInput" placeholder="OpenAI에 메시지를 입력하세요..." disabled>
+                    <button id="openaiSendButton" disabled>전송</button>
+                </div>
+                <div id="openaiLoadingDialog" class="loading-dialog hidden">
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+            <div class="chat-box chat-box--primary">
+                <h3>Ollama</h3>
+                <div class="chat-output" id="ollamaChatOutput"></div>
+                <div class="input-area">
+                    <input type="text" id="ollamaMessageInput" placeholder="메시지를 입력하세요..." disabled>
+                    <button id="ollamaSendButton" disabled>전송</button>
+                </div>
+                <div id="ollamaLoadingDialog" class="loading-dialog hidden">
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/static/js/script.js"></script>
+{% endblock %} 

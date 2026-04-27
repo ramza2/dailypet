@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}RAG 문서 업로드{% endblock %}
+
+{% block content %}
+    <h2>RAG 문서 업로드</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="file" class="form-label">문서 업로드</label>
+            <input type="file" class="form-control" id="file" name="file" accept=".pdf,.txt,.docx,.xlsx,.csv,.json,.html">
+            <div id="pdfLoaderOptions" style="display: none;" class="mt-2">
+                <label for="pdf_loader_type">PDF 로더 타입:</label>
+                <select id="pdf_loader_type" name="pdf_loader_type">
+                    <option value="pypdf">PyPDF</option>
+                    <option value="unstructured">Unstructured</option>
+                    <option value="fitz">PyMuPDF</option>
+                    <option value="pdfplumber">PDFPlumber</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">업로드</button>
+    </form>
+    <div id="result" class="mt-3"></div>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        window.onload = function() {
+            const fileInput = document.getElementById('file');
+            const pdfLoaderOptions = document.getElementById('pdfLoaderOptions');
+            
+            fileInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file && file.name.toLowerCase().endsWith('.pdf')) {
+                    pdfLoaderOptions.style.display = 'block';
+                } else {
+                    pdfLoaderOptions.style.display = 'none';
+                }
+            });
+            
+            const form = document.getElementById('uploadForm');
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // 결과 메시지 초기화
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = '<div class="alert alert-info">문서 처리 중...</div>';
+                
+                const formData = new FormData();
+                const file = document.getElementById('file').files[0];
+                formData.append('file', file);
+                
+                if (file && file.name.toLowerCase().endsWith('.pdf')) {
+                    const loaderType = document.getElementById('pdf_loader_type').value;
+                    formData.append('pdf_loader_type', loaderType);
+                }
+                
+                try {
+                    const response = await fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    if (result.error) {
+                        resultDiv.innerHTML = `<div class="alert alert-danger">${result.error}</div>`;
+                    } else {
+                        resultDiv.innerHTML = `<div class="alert alert-success">문서가 성공적으로 처리되었습니다.</div>`;
+                    }
+                } catch (error) {
+                    resultDiv.innerHTML = 
+                        `<div class="alert alert-danger">오류 발생: ${error.message}</div>`;
+                }
+            });
+        };
+    </script>
+{% endblock %} 

@@ -1,0 +1,259 @@
+{% extends "layout.html" %}
+
+{% block title %}프롬프트 템플릿 관리{% endblock %}
+
+{% block extra_css %}
+<style>
+    .container {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .template-list {
+        flex: 1;
+        max-width: 300px;
+    }
+    
+    .template-list h2 {
+        margin-bottom: 1rem;
+    }
+    
+    .template-item {
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    .template-item:hover {
+        background-color: #f5f5f5;
+    }
+    
+    .template-form {
+        flex: 2;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+    
+    .form-group input[type="text"] {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+    .form-group textarea {
+        width: 100%;
+        height: 400px;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: monospace;
+    }
+    
+    .button-group {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    button {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    button.save {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    button.new {
+        background-color: #2196F3;
+        color: white;
+    }
+    
+    button.delete {
+        background-color: #f44336;
+        color: white;
+    }
+    
+    button:hover {
+        opacity: 0.9;
+    }
+    
+    .selected {
+        background-color: #e3f2fd;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="template-list">
+        <h2>템플릿 목록</h2>
+        <div id="templateList">
+            {% for template in templates %}
+            <div class="template-item" data-id="{{ template.id }}">
+                {{ template.name }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="template-form">
+        <h2>템플릿 편집</h2>
+        <form id="templateForm">
+            <input type="hidden" id="templateId" name="id">
+            <div class="form-group">
+                <label for="templateName">템플릿 이름</label>
+                <input type="text" id="templateName" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="templateContent">템플릿 내용</label>
+                <textarea id="templateContent" name="content" required></textarea>
+            </div>
+            <div class="button-group">
+                <button type="button" class="new" onclick="newTemplate()">새로 만들기</button>
+                <button type="submit" class="save">저장</button>
+                <button type="button" class="delete" onclick="deleteTemplate()">삭제</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const defaultTemplate = `너는 반려견 건강 전문가이자 수의사입니다.
+
+- 사용자의 질문에 대해 항상 **자연스러운 한국어 문장**으로 답변해주세요.
+- 응답은 **정중하고 상담하는 듯한 구어체**로 작성해 주세요.
+- 외래어 사용이 필요한 경우에는 괄호를 사용하여 한글 설명을 함께 제공해 주세요. 예: 스트레스(stress)
+- "질문:", "답변:", "키워드:" 등의 메타 문구는 포함하지 마세요.
+- 사용자가 이해할 수 있도록 쉬운 문장으로 설명해주세요.
+
+---
+
+반려견 정보:
+{% raw %}{{ dog_profile }}{% endraw %}
+
+{% raw %}{% if context and context.strip() %}{% endraw %}
+참고 문서 (한글로 작성됨):
+{% raw %}{{ context }}{% endraw %}
+{% raw %}{% endif %}{% endraw %}
+
+{% raw %}{% if chat_history and chat_history.strip() %}{% endraw %}
+이전 대화 내용:
+{% raw %}{{ chat_history }}{% endraw %}
+{% raw %}{% endif %}{% endraw %}
+
+사용자의 질문:
+{% raw %}{{ question }}{% endraw %}
+
+응답:`;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('templateForm');
+    const templateList = document.getElementById('templateList');
+    const templateContent = document.getElementById('templateContent');
+    
+    // 새로운 템플릿 생성시 기본값 설정
+    if (!templateContent.value) {
+        templateContent.value = defaultTemplate;
+    }
+    
+    // 템플릿 선택 이벤트
+    templateList.addEventListener('click', async function(e) {
+        const item = e.target.closest('.template-item');
+        if (!item) return;
+        
+        // 선택 효과
+        document.querySelectorAll('.template-item').forEach(el => el.classList.remove('selected'));
+        item.classList.add('selected');
+        
+        // 템플릿 데이터 로드
+        const id = item.dataset.id;
+        const response = await fetch(`/api/prompt_templates/${id}`);
+        const data = await response.json();
+        
+        document.getElementById('templateId').value = data.id;
+        document.getElementById('templateName').value = data.name;
+        document.getElementById('templateContent').value = data.content;
+    });
+    
+    // 폼 제출 이벤트
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            id: document.getElementById('templateId').value,
+            name: document.getElementById('templateName').value,
+            content: document.getElementById('templateContent').value
+        };
+        
+        const method = formData.id ? 'PUT' : 'POST';
+        const url = formData.id ? `/api/prompt_templates/${formData.id}` : '/api/prompt_templates';
+        
+        try {
+            const response = await fetch(url, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            if (!response.ok) throw new Error('저장 실패');
+            
+            // 페이지 새로고침
+            window.location.reload();
+        } catch (error) {
+            alert('템플릿 저장 중 오류가 발생했습니다.');
+            console.error('Error:', error);
+        }
+    });
+});
+
+function newTemplate() {
+    document.getElementById('templateId').value = '';
+    document.getElementById('templateName').value = '';
+    document.getElementById('templateContent').value = defaultTemplate;
+    document.querySelectorAll('.template-item').forEach(el => el.classList.remove('selected'));
+}
+
+async function deleteTemplate() {
+    const id = document.getElementById('templateId').value;
+    if (!id) {
+        alert('삭제할 템플릿을 선택해주세요.');
+        return;
+    }
+    
+    if (!confirm('정말 삭제하시겠습니까?')) return;
+    
+    try {
+        const response = await fetch(`/api/prompt_templates/${id}`, {
+            method: 'DELETE'
+        });
+        
+        if (!response.ok) throw new Error('삭제 실패');
+        
+        // 페이지 새로고침
+        window.location.reload();
+    } catch (error) {
+        alert('템플릿 삭제 중 오류가 발생했습니다.');
+        console.error('Error:', error);
+    }
+}
+</script>
+{% endblock %} 

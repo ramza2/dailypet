@@ -1,0 +1,196 @@
+{% extends "layout.html" %}
+
+{% block title %}LLM RAG 문서{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="docs-container">
+        <!-- 좌측 파일 목록 -->
+        <div class="file-list">
+            <h2>문서 목록</h2>
+            <div class="files">
+                {% for file in markdown_files %}
+                <a href="/docs/llm-rag/{{ file.name }}" 
+                   class="file-item {% if selected_file and selected_file.name == file.name %}selected{% endif %}">
+                    <div class="file-name">{{ file.name }}</div>
+                    <div class="file-date">{{ file.created_time.strftime('%Y-%m-%d %H:%M') }}</div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 우측 문서 내용 -->
+        <div class="markdown-content">
+            {% if selected_file %}
+            <h1>{{ selected_file.name }}</h1>
+            <div class="markdown-body">
+                {{ content | safe }}
+            </div>
+            {% else %}
+            <div class="no-file-selected">
+                문서를 선택하세요
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.docs-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.file-list {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.file-list h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.files {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.file-item:hover {
+    background-color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.file-item.selected {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+}
+
+.file-name {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.file-date {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.markdown-content {
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.markdown-content h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.no-file-selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #666;
+    font-size: 1.2em;
+}
+
+.markdown-body {
+    line-height: 1.6;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.markdown-body p {
+    margin-bottom: 1em;
+}
+
+.markdown-body pre {
+    background-color: #f8f8fa;
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1em 0;
+}
+
+.markdown-body code {
+    background-color: #f8f8fa;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin: 1em 0;
+    padding-left: 1.5em;
+}
+
+.markdown-body li {
+    margin-bottom: 0.5em;
+}
+
+.markdown-body blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 1em;
+    margin: 1em 0;
+    color: #666;
+}
+
+.markdown-body table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.markdown-body th,
+.markdown-body td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.markdown-body th {
+    background-color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+    .docs-container {
+        flex-direction: column;
+    }
+    
+    .file-list {
+        width: 100%;
+    }
+}
+</style>
+{% endblock %} 

@@ -1,0 +1,253 @@
+2025-05-23 15:08:29,716 - repository.dog_docs_repository - ERROR - source 목록 조회 중 오류 발생: relation "dog_docs" does not exist
+2025-05-23 15:08:29,717 - __main__ - ERROR - 문서 목록 조회 중 오류 발생: relation "dog_docs" does not exist
+2025-05-23 15:46:27,836 - repository.prompt_template_repository - ERROR - 프롬프트 템플릿 목록 조회 중 오류 발생: relation "prompt_templates" does not exist
+2025-05-23 15:55:32,937 - repository.prompt_template_repository - ERROR - 프롬프트 템플릿 목록 조회 중 오류 발생: relation "prompt_templates" does not exist
+2025-05-23 16:21:35,988 - rag.loader - INFO - PDF 로더 타입 파라미터: pdfplumber
+2025-05-23 16:21:35,988 - rag.loader - INFO - PDF 로더 타입 설정됨: pdfplumber
+2025-05-23 16:21:35,989 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:21:35,990 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-05-23 16:21:36,374 - rag.loader - INFO - PDF에 텍스트 레이어가 존재합니다. OCR이 이미 처리된 것으로 판단됩니다.
+2025-05-23 16:27:16,985 - rag.loader - INFO - PDF가 아닌 파일의 로더 타입 설정: excel
+2025-05-23 16:27:16,985 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:27:16,985 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-05-23 16:27:16,988 - rag.loader - ERROR - Excel 파일 로드 중 오류 발생: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2025-05-23 16:27:16,988 - rag.loader - ERROR - 문서 로드 중 오류 발생: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2025-05-23 16:27:16,989 - __main__ - ERROR - 문서 업로드 중 오류 발생: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2025-05-23 16:28:47,785 - rag.loader - INFO - PDF가 아닌 파일의 로더 타입 설정: excel
+2025-05-23 16:28:47,786 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:28:47,786 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-05-23 16:36:30,057 - rag.loader - INFO - PDF 로더 타입 파라미터: pdfplumber
+2025-05-23 16:36:30,058 - rag.loader - INFO - PDF 로더 타입 설정됨: pdfplumber
+2025-05-23 16:36:30,058 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:36:30,058 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-05-23 16:36:30,228 - rag.loader - INFO - PDF에 텍스트 레이어가 존재합니다. OCR이 이미 처리된 것으로 판단됩니다.
+2025-05-23 16:39:11,385 - rag.loader - INFO - PDF 로더 타입 파라미터: pdfplumber
+2025-05-23 16:39:11,386 - rag.loader - INFO - PDF 로더 타입 설정됨: pdfplumber
+2025-05-23 16:39:11,386 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:39:11,386 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-05-23 16:39:11,438 - rag.loader - INFO - PDF에 텍스트 레이어가 존재합니다. OCR이 이미 처리된 것으로 판단됩니다.
+2025-05-23 16:40:01,415 - rag.loader - INFO - PDF 로더 타입 파라미터: pdfplumber
+2025-05-23 16:40:01,415 - rag.loader - INFO - PDF 로더 타입 설정됨: pdfplumber
+2025-05-23 16:40:01,416 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:40:01,416 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-05-23 16:40:01,419 - rag.loader - INFO - PDF에 텍스트 레이어가 존재합니다. OCR이 이미 처리된 것으로 판단됩니다.
+2025-05-23 16:41:32,897 - rag.loader - INFO - PDF 로더 타입 파라미터: pdfplumber
+2025-05-23 16:41:32,897 - rag.loader - INFO - PDF 로더 타입 설정됨: pdfplumber
+2025-05-23 16:41:32,897 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:41:32,898 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-05-23 16:41:33,036 - rag.loader - INFO - PDF에 이미지가 존재합니다. OCR이 필요한 것으로 판단됩니다.
+2025-05-23 16:46:34,477 - rag.loader - INFO - PDF가 아닌 파일의 로더 타입 설정: docx
+2025-05-23 16:46:34,477 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:46:34,477 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-05-23 16:50:37,710 - rag.loader - INFO - PDF가 아닌 파일의 로더 타입 설정: docx
+2025-05-23 16:50:37,711 - rag.loader - INFO - Poppler 경로 설정: D:\Utils\poppler-windows\poppler-24.08.0\Library\bin
+2025-05-23 16:50:37,711 - rag.loader - INFO - Tesseract 경로 설정: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-06-18 17:21:50,573 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 17:21:50,599 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 17:21:54,913 - repository.dog_docs_repository - ERROR - 유사 문서 검색 중 오류 발생: operator does not exist: text <=> unknown
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2025-06-18 17:21:54,913 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: operator does not exist: text <=> unknown
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2025-06-18 17:21:54,914 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 17:32:46,214 - __main__ - ERROR - 채팅 이력 조회 중 오류 발생: 'DogChatsRepository' object has no attribute 'get_chats_by_dog_and_provider'
+2025-06-18 17:34:24,994 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 17:34:25,015 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 17:34:25,244 - repository.dog_docs_repository - ERROR - 유사 문서 검색 중 오류 발생: operator does not exist: text <=> unknown
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2025-06-18 17:34:25,245 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: operator does not exist: text <=> unknown
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2025-06-18 17:35:40,295 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 17:35:59,162 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 17:36:05,251 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 17:36:21,197 - repository.dog_docs_repository - ERROR - 유사 문서 검색 중 오류 발생: operator does not exist: text <=> unknown
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2025-06-18 17:36:21,199 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: operator does not exist: text <=> unknown
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2025-06-18 17:36:21,199 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 17:36:40,730 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 17:36:40,743 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 17:41:52,475 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 17:41:53,969 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 17:46:21,204 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 17:46:21,221 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:29:24,715 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:29:24,874 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:29:49,117 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:29:49,118 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: 'Pet' object has no attribute 'is_neutered'
+2025-06-18 18:29:49,118 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 18:34:54,842 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:34:54,864 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:34:57,193 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:34:57,217 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:34:57,217 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:34:57,217 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 18:37:08,171 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:37:08,188 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:37:46,100 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:37:46,135 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:37:46,135 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:37:46,135 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 18:37:48,253 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:37:48,253 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:38:33,808 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:38:37,693 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:38:37,694 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: syntax error at or near "%"
+2025-06-18 18:38:37,695 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 18:41:47,736 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:41:47,761 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:43:19,300 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:43:19,351 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:43:49,801 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: column "start_dt" does not exist
+2025-06-18 18:43:49,829 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 18:43:49,829 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 18:43:49,829 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 18:47:26,985 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:47:27,004 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:47:45,197 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: invalid input for query argument $2: datetime.datetime(2025, 5, 19, 18, 47, 3... (expected str, got datetime)
+2025-06-18 18:47:45,229 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 18:47:45,229 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 18:47:45,230 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 18:51:58,250 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:51:58,282 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:52:18,800 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: column "respiratory_rate" does not exist
+2025-06-18 18:52:18,838 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 18:52:18,838 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 18:52:18,838 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 18:56:37,268 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 18:56:37,285 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 18:56:53,671 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: column "measure_dt" does not exist
+2025-06-18 18:56:53,703 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 18:56:53,704 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 18:56:53,704 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 19:00:01,613 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:00:01,635 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:00:17,392 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: division by zero
+2025-06-18 19:00:17,421 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 19:00:17,421 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: relation "t_dog_chat" does not exist
+2025-06-18 19:00:17,422 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 19:01:44,467 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:01:44,485 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:01:59,580 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: division by zero
+2025-06-18 19:02:06,813 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: could not determine data type of parameter $2
+2025-06-18 19:02:06,814 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: could not determine data type of parameter $2
+2025-06-18 19:02:06,814 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 19:02:27,134 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:02:27,146 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:02:29,462 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: division by zero
+2025-06-18 19:02:43,851 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: could not determine data type of parameter $2
+2025-06-18 19:02:46,943 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: could not determine data type of parameter $2
+2025-06-18 19:02:46,943 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 19:03:08,772 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:03:08,787 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:03:11,180 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: division by zero
+2025-06-18 19:04:03,981 - repository.dog_chats_repository - ERROR - 채팅 이력 조회 중 오류 발생: could not determine data type of parameter $2
+2025-06-18 19:04:03,982 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: could not determine data type of parameter $2
+2025-06-18 19:04:03,983 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 19:05:58,656 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:05:58,673 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:06:01,453 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: division by zero
+2025-06-18 19:08:44,619 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:08:44,636 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:09:19,389 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: division by zero
+2025-06-18 19:11:25,069 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:11:25,103 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:11:25,619 - llm.ollama.chat - ERROR - 건강 모니터링 데이터 조회 중 오류 발생: division by zero
+2025-06-18 19:12:39,885 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: __init__() got an unexpected keyword argument 'dog_id'
+2025-06-18 19:12:39,886 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 19:19:32,295 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:19:32,316 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:21:29,935 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: __init__() got an unexpected keyword argument 'dog_id'
+2025-06-18 19:21:29,936 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-18 19:24:44,162 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=1, message=우리 아이 식단 추천해줘
+2025-06-18 19:24:44,177 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-18 19:30:22,742 - __main__ - ERROR - 채팅 이력 조회 중 오류 발생: 'DogChatsRepository' object has no attribute 'get_chats_by_dog_and_provider'
+2025-06-25 17:26:15,660 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=2, message=식단 추천해줘
+2025-06-25 17:26:15,693 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 댕이
+2025-06-25 17:37:14,813 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=0, message=식단 추천해줘
+2025-06-25 17:42:44,829 - llm.ollama.chat - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-25 17:42:44,831 - __main__ - ERROR - 채팅 처리 중 오류 발생: 
+2025-06-25 17:44:21,590 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=2, message=식단 추천해줘
+2025-06-25 17:44:31,348 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 댕이
+2025-06-25 17:48:23,306 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=2, message=식단 추천해줘
+2025-06-25 17:48:23,343 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 댕이
+2025-06-25 17:53:17,077 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=2, message=우리 아이 건강상태는?
+2025-06-25 17:53:17,104 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 댕이
+2025-06-25 17:53:59,484 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=2, message=식단추천
+2025-06-25 17:53:59,496 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 댕이
+2025-06-25 18:46:36,053 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=2, message=산책은 어느 정도가 적당한가?
+2025-06-25 18:46:36,071 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 댕이
+2025-06-27 12:28:51,326 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=1, message=안녕하세요
+2025-06-27 12:28:51,397 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-27 12:29:01,253 - llm.ollama.chat - ERROR - 스트리밍 채팅 처리 중 오류 발생: 
+2025-06-27 12:29:36,843 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=1, message=안녕하세요
+2025-06-27 12:29:36,854 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-27 12:29:42,898 - llm.ollama.chat - ERROR - 스트리밍 채팅 처리 중 오류 발생: 
+2025-06-27 12:40:22,288 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=1, message=안녕하세요
+2025-06-27 12:40:22,355 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-27 12:40:28,202 - llm.ollama.chat - ERROR - 스트리밍 채팅 처리 중 오류 발생: 
+2025-06-27 12:41:01,073 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=1, message=안녕하세요
+2025-06-27 12:41:01,082 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-27 12:41:06,796 - llm.ollama.chat - ERROR - 스트리밍 채팅 처리 중 오류 발생: 
+2025-06-27 12:41:43,115 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=1, message=안녕하세요
+2025-06-27 12:41:43,125 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-27 12:41:48,878 - llm.ollama.chat - ERROR - 스트리밍 채팅 처리 중 오류 발생: 
+2025-06-27 12:42:57,578 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=1, message=안녕하세요
+2025-06-27 12:42:57,589 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-27 12:43:03,381 - llm.ollama.chat - ERROR - 스트리밍 채팅 처리 중 오류 발생: 
+2025-06-27 13:18:56,070 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=1, message=안녕하세요
+2025-06-27 13:19:09,211 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-27 13:19:33,325 - llm.ollama.chat - INFO - 프롬프트 구성 완료, 길이: 535
+2025-06-27 13:19:44,588 - llm.ollama.chat - INFO - Ollama API 호출 시작
+2025-06-27 13:19:55,955 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 13:20:04,058 - llm.ollama.chat - INFO - Ollama API 응답 상태: 200
+2025-06-27 13:20:38,163 - llm.ollama.chat - INFO - Ollama 스트리밍 완료
+2025-06-27 13:27:51,209 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\ProgramData\Anaconda3\lib\asyncio\proactor_events.py", line 162, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+2025-06-27 13:28:17,233 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=1, message=안녕하세요
+2025-06-27 13:28:17,253 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 알리
+2025-06-27 13:28:17,637 - llm.ollama.chat - INFO - 프롬프트 구성 완료, 길이: 535
+2025-06-27 13:28:17,838 - llm.ollama.chat - INFO - Ollama API 호출 시작
+2025-06-27 13:28:20,262 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 13:28:20,263 - llm.ollama.chat - INFO - Ollama API 응답 상태: 200
+2025-06-27 13:28:22,139 - llm.ollama.chat - INFO - Ollama 스트리밍 완료
+2025-06-27 13:28:22,277 - llm.ollama.chat - INFO - 채팅 이력 저장 완료
+2025-06-27 13:33:45,730 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=3, message=식단을 만들어줘
+2025-06-27 13:33:45,821 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 송이
+2025-06-27 13:33:46,142 - llm.ollama.chat - INFO - 프롬프트 구성 완료, 길이: 535
+2025-06-27 13:33:46,349 - llm.ollama.chat - INFO - Ollama API 호출 시작
+2025-06-27 13:33:48,835 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 13:33:48,835 - llm.ollama.chat - INFO - Ollama API 응답 상태: 200
+2025-06-27 13:33:50,778 - llm.ollama.chat - INFO - Ollama 스트리밍 완료
+2025-06-27 13:33:50,921 - llm.ollama.chat - INFO - 채팅 이력 저장 완료
+2025-06-27 13:38:12,353 - llm.ollama.chat - INFO - 스트리밍 채팅 요청 수신: dog_id=3, message=식단을 만들어줘
+2025-06-27 13:38:12,392 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 송이
+2025-06-27 13:38:13,207 - llm.ollama.chat - INFO - 프롬프트 구성 완료, 길이: 31523
+2025-06-27 13:38:13,441 - llm.ollama.chat - INFO - Ollama API 호출 시작
+2025-06-27 13:38:17,823 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 13:38:17,823 - llm.ollama.chat - INFO - Ollama API 응답 상태: 200
+2025-06-27 13:38:56,422 - llm.ollama.chat - INFO - Ollama 스트리밍 완료
+2025-06-27 13:38:56,635 - llm.ollama.chat - INFO - 채팅 이력 저장 완료
+2025-06-27 13:42:38,009 - llm.ollama.chat - INFO - 채팅 요청 수신: dog_id=3, message=우리 강아지 나이에 맞는 식단은?
+2025-06-27 13:42:38,026 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 송이
+2025-06-27 13:44:02,527 - llm.ollama.chat - INFO - 프롬프트 템플릿 스트리밍 채팅 요청 수신: dog_id=3, message=스트리밍 테스트
+2025-06-27 13:44:02,540 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 송이
+2025-06-27 13:44:02,811 - llm.ollama.chat - INFO - 프롬프트 템플릿 프롬프트 구성 완료, 길이: 2867
+2025-06-27 13:44:03,043 - llm.ollama.chat - INFO - Ollama API 호출 시작
+2025-06-27 13:44:04,980 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 13:44:04,981 - llm.ollama.chat - INFO - Ollama API 응답 상태: 200
+2025-06-27 13:44:27,774 - llm.ollama.chat - INFO - Ollama 스트리밍 완료
+2025-06-27 13:44:27,929 - llm.ollama.chat - INFO - 채팅 이력 저장 완료
+2025-06-27 13:44:39,356 - llm.ollama.chat - INFO - 프롬프트 템플릿 스트리밍 채팅 요청 수신: dog_id=3, message=적당한 산책 시간은?
+2025-06-27 13:44:39,367 - llm.ollama.chat - INFO - 반려견 프로필 조회 완료: 송이
+2025-06-27 13:44:39,664 - llm.ollama.chat - INFO - 프롬프트 템플릿 프롬프트 구성 완료, 길이: 24249
+2025-06-27 13:44:39,918 - llm.ollama.chat - INFO - Ollama API 호출 시작
+2025-06-27 13:44:44,214 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 13:44:44,214 - llm.ollama.chat - INFO - Ollama API 응답 상태: 200
+2025-06-27 13:45:22,420 - llm.ollama.chat - INFO - Ollama 스트리밍 완료
+2025-06-27 13:45:22,565 - llm.ollama.chat - INFO - 채팅 이력 저장 완료
